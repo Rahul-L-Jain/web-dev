@@ -1,16 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const tb= document.getElementById("themeToggle");
+
+    /* Theme toggle (safe) */
+    const toggleBtn = document.getElementById("themeToggle");
     const body = document.body;
 
-    tb.addEventListener("click", () => {
-        if (body.classList.contains("light")) {
-            body.classList.remove("light");
-            body.classList.add("dark");
-            tb.textContent = "☀️ Light Mode";
-        } else {
-            body.classList.remove("dark");
-            body.classList.add("light");
-            tb.textContent = "🌙 Dark Mode";
-        }
+    if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("dark");
+            body.classList.toggle("light");
+
+            toggleBtn.textContent = body.classList.contains("dark")
+                ? "☀️ Light Mode"
+                : "🌙 Dark Mode";
+        });
+    }
+
+    /* Flip card logic */
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            card.classList.toggle("flipped");
+        });
     });
+
 });
