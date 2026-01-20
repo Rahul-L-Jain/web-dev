@@ -1,0 +1,49 @@
+
+body {
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+    text-align: center;
+}
+
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    text-align: center;
+}
+
+
+.image-container {
+    display: flex;
+    gap: 50px;
+    padding: 45px;
+    justify-content: center;
+}
+
+.image-container img {
+    border-radius: 40px;
+    width: 400px;
+    object-fit: cover;
+    
+}
+
+
+body.light {
+    background-color: #ffffff;
+    color: black;
+}
+
+
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+button {
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px navajowhite;
+}
