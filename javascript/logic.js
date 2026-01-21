@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (body.classList.contains("light")) {
             body.classList.remove("light");
             body.classList.add("dark");
-            tb.textContent = "☀️ Light Mode";
+            tb.textContent = "Light Mode";
         } else {
             body.classList.remove("dark");
             body.classList.add("light");
-            tb.textContent = "🌙 Dark Mode";
+            tb.textContent = "Dark Mode";
         }
     });
 });
