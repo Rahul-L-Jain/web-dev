@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!toggleBtn) return; // safety check
 
     toggleBtn.addEventListener("click", () => {
-        const isLight = body.classList.toggle("dark");
+        const isDark = body.classList.toggle("dark");
 
-        body.classList.toggle("light", !isLight);
+        body.classList.toggle("light", !isDark);
 
-        toggleBtn.textContent = isLight ? "Light Mode" : "Dark Mode";
+        toggleBtn.textContent = isDark ? " Light Mode" : "Dark Mode";
     });
 });
 
